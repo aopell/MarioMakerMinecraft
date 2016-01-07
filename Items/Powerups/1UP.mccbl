@@ -12,3 +12,10 @@ execute @e[type=ArmorStand,name=give1up] ~ ~ ~ give @p minecraft:brown_mushroom
 execute @e[type=ArmorStand,name=give1up] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:"taken1up",NoGravity:1b,Invisible:1b}
 execute @e[type=ArmorStand,name=taken1up] ~ ~ ~ kill @e[type=ArmorStand,name=give1up,r=0]
 execute @e[type=ArmorStand,name=taken1up] ~ ~ ~ setblock ~ ~ ~ minecraft:air
+
+:: "100 Coins"
+	scoreboard players set @a @!coinLife 1 {Inventory:[{id:minecraft:rotten_flesh,Count:64B},{id:minecraft:rotten_flesh,Count:36B}]}
+	give @a[score_coinLife_min=1] minecraft:brown_mushroom
+	clear @a[score_coinLife_min=1] minecraft:rotten_flesh 0 100
+	scoreboard players set @a @!coinLife 0
+;;
