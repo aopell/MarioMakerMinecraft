@@ -8,7 +8,7 @@
 	execute @a[score_leafAttack_min=1] ~ ~ ~ playsound @!leaf_attack @p
 	execute @a[score_leafAttack_min=1] ~ ~ ~ kill @e[type=!ArmorStand,r=2,team=!None]
 	scoreboard players set @a[score_leafAttack_min=1] spin 10
-	/scoreboard players remove @a[score_spin_min=0] spin 1
+	scoreboard players remove @a[score_spin_min=0] spin 1
 	tp @a[score_spin_min=0] ~ ~ ~ ~36 ~
 ;;
 :: "Break Blocks"
