@@ -1,0 +1,43 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+
+:: "Spin Attack"
+	clear @a[score_leaf=0] minecraft:map
+	scoreboard players set @a[score_leaf_min=1] @!leafAttack 1 {Inventory:[{id:minecraft:filled_map}]}
+	execute @a[score_leafAttack_min=1] ~ ~ ~ playsound @!leaf_attack @p
+	execute @a[score_leafAttack_min=1] ~ ~ ~ kill @e[type=!ArmorStand,r=2,team=!None]
+;;
+:: "Break Blocks"
+	execute @a[m=2,score_leafAttack_min=1] ~ ~ ~ scoreboard players set @e[type=ArmorStand,name=CoinQBlock,r=1] @!giveItem 1
+	execute @a[m=2,score_leafAttack_min=1] ~ ~ ~ scoreboard players set @e[type=ArmorStand,name=Mushroom,r=1] @!giveItem 1
+	execute @a[m=2,score_leafAttack_min=1] ~ ~ ~ scoreboard players set @e[type=ArmorStand,name=Tanooki,r=1] @!giveItem 1
+;;
+:: "Tanooki Suit"
+	replaceitem entity @a[score_leaf_min=1] slot.armor.head minecraft:leather_helmet 1 0 {ench:[{id:2,lvl:10}]}
+	replaceitem entity @a[score_leaf_min=1] slot.armor.legs minecraft:leather_leggings 1 0 {ench:[{id:2,lvl:10}]}
+	replaceitem entity @a[score_leaf_min=1] slot.armor.chest minecraft:leather_chestplate 1 0 {ench:[{id:2,lvl:10}]}
+	replaceitem entity @a[score_leaf_min=1] slot.armor.feet minecraft:leather_boots 1 0 {ench:[{id:2,lvl:1000}]}
+	replaceitem entity @a[score_leaf_min=1] slot.hotbar.7 minecraft:map	
+	replaceitem entity @a[score_leaf_min=1] slot.hotbar.8 minecraft:deadbush
+	clear @a[score_leaf=0] minecraft:leather_boots
+	clear @a[score_leaf=0] minecraft:leather_leggings
+	clear @a[score_leaf=0] minecraft:leather_helmet
+	clear @a[score_leaf=0] minecraft:leather_chestplate
+;;
+
+//Jump Boost
+effect @a[score_leaf_min=1] minecraft:jump_boost 1 4 true
+
+//Levitation
+effect @a[score_leaf_min=1] minecraft:levitation 1 253 true
+
+:: "Hold To Drop"
+	scoreboard players set @a @!deadbush 0
+	scoreboard players set @a[score_leaf_min=1] @!deadbush 1 {SelectedItemSlot:8}
+	effect @a[score_deadbush_min=1] minecraft:levitation 0 0
+	clear @a[score_leaf=0] minecraft:deadbush
+;;
+
+//Reset Spin Attack
+scoreboard players set @a @!leafAttack 0

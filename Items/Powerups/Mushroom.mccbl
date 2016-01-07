@@ -1,0 +1,10 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+
+effect @a[score_mushroom_min=1] minecraft:health_boost 2 4 true
+effect @a[score_mushroom=0] minecraft:health_boost 0
+scoreboard players set @a[score_mushroom=0] @!mushroom -1 {Inventory:[{id:minecraft:red_mushroom}]}
+execute @a[score_mushroom=-1] ~ ~ ~ playsound @!power_up @p
+scoreboard players set @a[score_mushroom=-1] @!mushroom 1
+clear @a minecraft:red_mushroom

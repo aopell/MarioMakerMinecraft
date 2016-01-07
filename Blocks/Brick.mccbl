@@ -7,4 +7,5 @@ execute @a ~ ~ ~ detect ~ ~1.8 ~ minecraft:brick_block 0 scoreboard players set 
 execute @a ~ ~ ~ detect ~ ~1.8 ~ minecraft:brick_block 0 scoreboard players set @e[type=ArmorStand,name=BreakableBrick,c=1,r=3] @!giveItem 1
 execute @e[type=ArmorStand,name=BreakableBrick,score_giveItem_min=1] ~ ~ ~ setblock ~ ~ ~ air 0 destroy
 execute @e[type=ArmorStand,name=BreakableBrick,score_giveItem_min=1] ~ ~ ~ execute @p ~ ~ ~ playsound @!brick_break @p
+execute @e[type=ArmorStand,name=BreakableBrick,score_giveItem_min=1] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:brokenbrick,Invisible:1b,NoGravity:1b,Small:1b}
 kill @e[type=ArmorStand,name=BreakableBrick,score_giveItem_min=1]
