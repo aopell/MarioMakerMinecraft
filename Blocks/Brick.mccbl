@@ -1,0 +1,10 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+
+execute @a[m=2,score_leafAttack_min=1] ~ ~ ~ scoreboard players set @e[type=ArmorStand,name=BreakableBrick,r=1] @!giveItem 1
+execute @a ~ ~ ~ detect ~ ~1.8 ~ minecraft:brick_block 0 scoreboard players set @e[type=ArmorStand,name=BreakableBrick,c=1,r=3] @!giveItem 1
+execute @a ~ ~ ~ detect ~ ~1.8 ~ minecraft:brick_block 0 scoreboard players set @e[type=ArmorStand,name=BreakableBrick,c=1,r=3] @!giveItem 1
+execute @e[type=ArmorStand,name=BreakableBrick,score_giveItem_min=1] ~ ~ ~ setblock ~ ~ ~ air 0 destroy
+execute @e[type=ArmorStand,name=BreakableBrick,score_giveItem_min=1] ~ ~ ~ execute @p ~ ~ ~ playsound @!brick_break @p
+kill @e[type=ArmorStand,name=BreakableBrick,score_giveItem_min=1]

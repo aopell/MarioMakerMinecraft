@@ -1,0 +1,36 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+
+:: "Coin"
+	execute @a ~ ~ ~ detect ~ ~1.8 ~ minecraft:gold_block 0 scoreboard players set @e[type=ArmorStand,name=CoinQBlock,c=1,r=3] @!giveItem 1
+	execute @e[type=ArmorStand,name=CoinQBlock,score_giveItem_min=1] ~ ~ ~ give @p minecraft:rotten_flesh
+	execute @e[type=ArmorStand,name=CoinQBlock,score_giveItem_min=1] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:takencoinqblock,Invisible:1b,NoGravity:1b,Small:1b}
+	execute @e[type=ArmorStand,name=CoinQBlock,score_giveItem_min=1] ~ ~ ~ setblock ~ ~-1 ~ minecraft:stone 2
+	execute @e[type=ArmorStand,name=CoinQBlock,score_giveItem_min=1] ~ ~ ~ execute @p ~ ~ ~ playsound @!coin @p
+	kill @e[type=ArmorStand,name=CoinQBlock,score_giveItem_min=1]
+;;
+
+:: "Mushroom"
+	execute @a ~ ~ ~ detect ~ ~1.8 ~ minecraft:gold_block 0 scoreboard players set @e[type=ArmorStand,name=Mushroom,c=1,r=3] @!giveItem 1
+	execute @e[type=ArmorStand,name=Mushroom,score_giveItem_min=1] ~ ~ ~ summon Item ~ ~ ~ {Item:{id:minecraft:red_mushroom,Count:1B}}
+	execute @e[type=ArmorStand,name=Mushroom,score_giveItem_min=1] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:takenmushroom,Invisible:1b,NoGravity:1b,Small:1b}
+	execute @e[type=ArmorStand,name=Mushroom,score_giveItem_min=1] ~ ~ ~ setblock ~ ~-1 ~ minecraft:stone 2
+	execute @e[type=ArmorStand,name=Mushroom,score_giveItem_min=1] ~ ~ ~ execute @p ~ ~ ~ playsound @!item_appear @p
+	kill @e[type=ArmorStand,name=Mushroom,score_giveItem_min=1]
+;;
+
+:: "Tanooki Leaf"
+	execute @a ~ ~ ~ detect ~ ~1.8 ~ minecraft:gold_block 0 scoreboard players set @e[type=ArmorStand,name=Tanooki,c=1,r=3] @!giveItem 1
+	execute @e[type=ArmorStand,name=Tanooki,score_giveItem_min=1] ~ ~ ~ summon Item ~ ~ ~ {Item:{id:minecraft:dye,Damage:3,Count:1B}}
+	execute @e[type=ArmorStand,name=Tanooki,score_giveItem_min=1] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:takentanooki,Invisible:1b,NoGravity:1b,Small:1b}
+	execute @e[type=ArmorStand,name=Tanooki,score_giveItem_min=1] ~ ~ ~ setblock ~ ~-1 ~ minecraft:stone 2
+	execute @e[type=ArmorStand,name=Tanooki,score_giveItem_min=1] ~ ~ ~ execute @p ~ ~ ~ playsound @!item_appear @p
+	kill @e[type=ArmorStand,name=Tanooki,score_giveItem_min=1]
+;;
+
+:: "Item Movement"
+	scoreboard players set @e[type=Item] @!moveItem 1 {Item:{id:minecraft:red_mushroom}}
+	scoreboard players set @e[type=Item] @!moveItem 1 {Item:{id:minecraft:dye,Damage:3B}}
+	tp @e[score_moveItem_min=1] ~ ~ ~-0.03
+;;

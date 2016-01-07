@@ -1,0 +1,22 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+
+:: "Stationary Coins"
+	execute @e[type=ArmorStand,name=coingive] ~ ~ ~ give @p[m=2] minecraft:rotten_flesh 1
+	execute @e[type=ArmorStand,name=coingive] ~ ~ ~ execute @p[m=2] ~ ~ ~ playsound @!coin @p
+	execute @e[type=ArmorStand,name=coingive] ~ ~ ~ summon ArmorStand ~ ~ ~ {DisabledSlots:2039583,CustomName:takencoin,NoGravity:1b,Invisible:1b}
+	execute @a[m=2] ~ ~ ~ execute @e[type=ArmorStand,name=Coin,r=2] ~ ~ ~ summon ArmorStand ~ ~ ~ {DisabledSlots:2039583,CustomName:coingive,Invisible:1b,NoGravity:1b}
+	execute @e[type=ArmorStand,name=coingive] ~ ~ ~ kill @e[type=ArmorStand,r=0,name=Coin]
+	execute @e[type=ArmorStand,name=takencoin] ~ ~ ~ kill @e[type=ArmorStand,r=0,name=coingive]
+;;
+
+:: "Moving Coins"
+	execute @e[type=ArmorStand,name=watercoingive] ~ ~ ~ give @p[m=2] minecraft:rotten_flesh 1
+	execute @e[type=ArmorStand,name=watercoingive] ~ ~ ~ execute @p[m=2] ~ ~ ~ playsound @!coin @p
+	execute @e[type=ArmorStand,name=watercoingive] ~ ~ ~ summon ArmorStand ~ ~ ~ {DisabledSlots:2039583,CustomName:takenwatercoin,NoGravity:1b,Invisible:1b}
+	execute @a[m=2] ~ ~ ~ execute @e[type=ArmorStand,name=waterCoin,r=2] ~ ~ ~ summon ArmorStand ~ ~ ~ {DisabledSlots:2039583,CustomName:watercoingive,Invisible:1b,NoGravity:1b}
+	execute @e[type=ArmorStand,name=watercoingive] ~ ~ ~ kill @e[type=ArmorStand,r=0,name=waterCoin]
+	execute @e[type=ArmorStand,name=takenwatercoin] ~ ~ ~ kill @e[type=ArmorStand,r=0,name=watercoingive]
+	kill @e[type=ArmorStand,name=takenwatercoin]
+;;

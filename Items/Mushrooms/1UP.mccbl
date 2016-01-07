@@ -1,0 +1,14 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+scoreboard players set @a @!extraLife 1 {Inventory:[{id:minecraft:brown_mushroom}]}
+execute @a[score_extraLife_min=1] ~ ~ ~ playsound @!1up @p
+clear @a minecraft:brown_mushroom
+scoreboard players reset @a @!extraLife
+execute @e[type=ArmorStand,name=1UP] ~ ~ ~ setblock ~ ~ ~ minecraft:brown_mushroom
+execute @a ~ ~ ~ execute @e[type=ArmorStand,r=0,name=1UP] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:"give1up",NoGravity:1b,Invisible:1b}
+execute @e[type=ArmorStand,name=give1up] ~ ~ ~ kill @e[type=ArmorStand,name=1UP,r=0]
+execute @e[type=ArmorStand,name=give1up] ~ ~ ~ give @p minecraft:brown_mushroom
+execute @e[type=ArmorStand,name=give1up] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:"taken1up",NoGravity:1b,Invisible:1b}
+execute @e[type=ArmorStand,name=taken1up] ~ ~ ~ kill @e[type=ArmorStand,name=give1up,r=0]
+execute @e[type=ArmorStand,name=taken1up] ~ ~ ~ setblock ~ ~ ~ minecraft:air
