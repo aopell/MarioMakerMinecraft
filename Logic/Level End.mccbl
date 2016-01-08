@@ -1,0 +1,8 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+
+execute @a[score_flagpole=0,score_flagpole_min=0] ~ ~ ~ detect ~ ~ ~ minecraft:iron_bars -1 scoreboard players set @p @!flagpole -1
+execute @a[score_flagpole=-1] ~ ~ ~ playsound @!level_complete @p ~ ~ ~ 1000
+execute @a[score_flagpole=-1] ~ ~ ~ replaceitem entity @e[type=ArmorStand,name=Flagpole,r=20] slot.armor.head minecraft:banner 1 0 {BlockEntityTag:{Base:1,Patterns:[{Pattern:sku,Color:15}]}}
+scoreboard players set @a[score_flagpole=-1] @!flagpole 1

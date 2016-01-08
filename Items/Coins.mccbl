@@ -20,3 +20,8 @@
 	execute @e[type=ArmorStand,name=takenwatercoin] ~ ~ ~ kill @e[type=ArmorStand,r=0,name=watercoingive]
 	kill @e[type=ArmorStand,name=takenwatercoin]
 ;;
+
+:: "Pickup Dropped Item Coin Sound"
+	execute @a[score_pickupCoin_min=1] ~ ~ ~ playsound @!coin @p
+	scoreboard players set @a @!pickupCoin 0
+;;

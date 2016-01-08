@@ -1,0 +1,28 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+
+effect @a minecraft:saturation 50 10 true
+execute @a[score_mushroom=0,score_leaf=0,score_damage_min=1] ~ ~ ~ playsound @!death @p ~ ~ ~ 1000
+effect @a[score_mushroom=0,score_leaf=0,score_damage_min=1] minecraft:instant_damage 1 50 true
+effect @a[score_damage_min=1] minecraft:instant_health 10 10 true
+effect @a[score_sprint=100] minecraft:jump_boost 2 1 true
+effect @a minecraft:regeneration 3 0 true
+
+:: "Remove Powerups When Damage Taken"
+	execute @a[score_mushroom_min=1,score_mushroom=1,score_damage_min=1] ~ ~ ~ playsound @!power_down @p
+	scoreboard players remove @a[score_mushroom_min=1,score_damage_min=1] @!mushroom 1
+	execute @a[score_leaf_min=1,score_damage_min=1] ~ ~ ~ playsound @!power_down @p
+	scoreboard players set @a[score_leaf_min=1,score_damage_min=1] @!mushroom 1
+	scoreboard players set @a[score_leaf_min=1,score_damage_min=1] @!leaf 0
+	scoreboard players set @a[score_damage_min=1] damage 0
+;;
+
+:: "Sprint Jump"
+	//Currently Not Working
+	effect @a[score_sprint_min=100] minecraft:jump_boost 2 2 true
+	scoreboard players remove @a @!sprint 18
+	scoreboard players set @a[score_sprint_min=100,score_jump_min=1] @!sprint 0
+	scoreboard players set @a[score_sprint=0] @!sprint 0
+	scoreboard players set @a[score_jump_min=1] @!jump 0
+;;

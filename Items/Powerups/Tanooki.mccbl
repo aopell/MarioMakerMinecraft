@@ -2,13 +2,19 @@
 @CHAIN ON
 @VERSION 1.9
 
+scoreboard players set @a[m=2,score_leaf=0] @!leaf -1 {Inventory:[{id:"minecraft:dye",Damage:3s}]}
+execute @a[score_leaf=-1] ~ ~ ~ playsound @!power_up @p
+scoreboard players set @a[score_leaf=-1] @!leaf 1
+clear @a minecraft:dye 3
+effect @a[score_leaf_min=1] minecraft:strength 1 1 true
+
 :: "Spin Attack"
 	clear @a[score_leaf=0] minecraft:map
 	scoreboard players set @a[score_leaf_min=1] @!leafAttack 1 {Inventory:[{id:minecraft:filled_map}]}
 	execute @a[score_leafAttack_min=1] ~ ~ ~ playsound @!leaf_attack @p
 	execute @a[score_leafAttack_min=1] ~ ~ ~ kill @e[type=!ArmorStand,r=2,team=!None]
-	scoreboard players set @a[score_leafAttack_min=1] spin 10
-	scoreboard players remove @a[score_spin_min=0] spin 1
+	scoreboard players set @a[score_leafAttack_min=1] @!spin 10
+	scoreboard players remove @a[score_spin_min=0] @!spin 1
 	tp @a[score_spin_min=0] ~ ~ ~ ~36 ~
 ;;
 :: "Break Blocks"
@@ -33,7 +39,7 @@
 effect @a[score_leaf_min=1] minecraft:jump_boost 1 4 true
 
 //Levitation
-effect @a[score_leaf_min=1] minecraft:levitation 1 253 true
+execute @a[score_leaf_min=1] ~ ~ ~ detect ~ ~-0.8 ~ minecraft:air 0 effect @p minecraft:levitation 1 253 true
 
 :: "Hold To Drop"
 	scoreboard players set @a @!deadbush 0

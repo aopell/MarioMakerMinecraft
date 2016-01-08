@@ -1,0 +1,41 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+
+:: "Colors"
+	scoreboard teams join @!Black @a[score_Color_min=0,score_Color=0,score_Star_min=1]
+	scoreboard teams join @!Dark_Gray @a[score_Color_min=1,score_Color=1,score_Star_min=1]
+	scoreboard teams join @!Gray @a[score_Color_min=2,score_Color=2,score_Star_min=1]
+	scoreboard teams join @!White @a[score_Color_min=3,score_Color=3,score_Star_min=1]
+	scoreboard teams join @!Blue @a[score_Color_min=4,score_Color=4,score_Star_min=1]
+	scoreboard teams join @!Aqua @a[score_Color_min=5,score_Color=5,score_Star_min=1]
+	scoreboard teams join @!Green @a[score_Color_min=6,score_Color=6,score_Star_min=1]
+	scoreboard teams join @!Yellow @a[score_Color_min=7,score_Color=7,score_Star_min=1]
+	scoreboard teams join @!Red @a[score_Color_min=8,score_Color=8,score_Star_min=1]
+	scoreboard teams join @!Light_Purple @a[score_Color_min=9,score_Color=9,score_Star_min=1]
+	scoreboard teams join @!Dark_Purple @a[score_Color_min=10,score_Color=10,score_Star_min=1]
+	scoreboard teams join @!Dark_Red @a[score_Color_min=11,score_Color=11,score_Star_min=1]
+	scoreboard teams join @!Gold @a[score_Color_min=12,score_Color=12,score_Star_min=1]
+	scoreboard teams join @!Dark_Green @a[score_Color_min=13,score_Color=13,score_Star_min=1]
+	scoreboard teams join @!Dark_Aqua @a[score_Color_min=14,score_Color=14,score_Star_min=1]
+	scoreboard teams join @!Dark_Blue @a[score_Color_min=15,score_Color=15,score_Star_min=1]
+	scoreboard players add @a[score_Star_min=1] @!Color 1
+	scoreboard players set @a[score_Color_min=16,score_Color=16] @!Color 0
+	scoreboard players add @a[score_Star_min=1] @!iTimer 1
+	scoreboard players set @a[score_iTimer_min=300] @!Star 0
+	scoreboard teams join @!None @a[score_iTimer_min=300]
+	scoreboard teams join @!None @a[team=]
+	scoreboard players set @a[score_iTimer_min=300] @!iTimer 0
+;;
+
+:: "Logic"
+	scoreboard players set @a @!Star 1 {Inventory:[{id:minecraft:gold_nugget}]}
+	clear @a[score_Star_min=1] minecraft:gold_nugget
+	effect @a[score_Star_min=1] minecraft:jump_boost 1 2 true
+	effect @a[score_Star_min=1] minecraft:speed 1 3 true
+	effect @a[score_Star_min=1] minecraft:resistance 1 127
+	effect @a[score_Star_min=1] minecraft:glowing 1 127 true
+	execute @a[score_Star_min=1] ~ ~ ~ kill @e[r=0,type=!Player]
+	execute @a[score_Star_min=1] ~ ~ ~ kill @a[r=0,score_Star=0]
+	execute @a[score_iTimer=1,score_iTimer_min=1] ~ ~ ~ playsound @!star @p ~ ~ ~ 10000.0
+;;
