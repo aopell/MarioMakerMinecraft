@@ -1,0 +1,111 @@
+{
+  "star": {
+    "sounds": [
+      "custom/star"
+    ]
+  },
+	
+	"power_up": {
+    "sounds": [
+      "custom/power_up"
+    ]
+  },
+	
+	"power_down": {
+    "sounds": [
+      "custom/power_down"
+    ]
+  },
+
+	"warp_pipe": {
+    "sounds": [
+      "custom/power_down"
+    ]
+  },
+	
+	"fire": {
+    "sounds": [
+      "custom/fire"
+    ]
+  },
+	
+	"item_appear": {
+    "sounds": [
+      "custom/item_appear"
+    ]
+  },
+
+	"checkpoint": {
+    "sounds": [
+      "custom/checkpoint"
+    ]
+  },
+
+	"star_coin": {
+    "sounds": [
+      "custom/star_coin"
+    ]
+  },
+
+	"jump1": {
+    "sounds": [
+      "custom/jump1"
+    ]
+  },
+
+	"jump2": {
+    "sounds": [
+      "custom/jump2"
+    ]
+  },
+
+	"triple_jump": {
+    "sounds": [
+      "custom/triple_jump"
+    ]
+  },
+	
+	"brick_break": {
+    "sounds": [
+      "custom/brick_break"
+    ]
+  },
+	
+	"death": {
+    "sounds": [
+      "custom/death"
+    ]
+  },
+
+	"1up": {
+    "sounds": [{
+      "name": "custom/1up",
+			"stream": "true"
+    }]
+  },
+	
+	"blank": {
+    "sounds": [{
+      "name": "custom/blank",
+			"stream": "true"
+    }]
+  },
+	
+	"leaf_attack": {
+    "sounds": [
+      "custom/leaf_attack"
+    ]
+  },
+	
+	"level_complete": {
+    "sounds": [
+      "custom/level_complete"
+    ]
+  },
+	
+	"coin": {
+    "sounds": [
+      "custom/coin"
+    ]
+  }	
+}
