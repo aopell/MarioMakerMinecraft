@@ -20,3 +20,11 @@
 	execute @e[type=ArmorStand,name=takenwatercoin] ~ ~ ~ kill @e[type=ArmorStand,r=0,name=watercoingive]
 	kill @e[type=ArmorStand,name=takenwatercoin]
 ;;
+:: "Pow"
+	scoreboard players set @e[type=Item] pow 1 {Item:{id:"minecraft:lapis_block"}}
+	execute @e[score_pow_min=1] ~ ~ ~ execute @e[type=ArmorStand,name=Coin,r=10] ~ ~ ~ summon Item ~ ~ ~ {Item:{id:rotten_flesh,Count:1}}
+	execute @e[score_pow_min=1] ~ ~ ~ execute @e[type=ArmorStand,name=Coin,r=10] ~ ~ ~ summon ArmorStand ~ ~ ~ {DisabledSlots:2039583,CustomName:takencoin,Invisible:1b,NoGravity:1b}
+	execute @e[score_pow_min=1] ~ ~ ~ execute @e[type=ArmorStand,name=takencoin,r=10] ~ ~ ~ kill @e[type=ArmorStand,r=0,name=coin]
+	kill @e[type=Item,score_pow_min=1]
+	scoreboard players set @e pow 0
+	
