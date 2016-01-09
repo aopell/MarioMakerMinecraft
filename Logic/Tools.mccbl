@@ -8,6 +8,7 @@
 ;;
 
 :: "Creeper => Kill ArmorStands"
+	execute @e[type=Creeper] ~ ~ ~ tell @p @!Killed @e[type=ArmorStand,r=2]
 	execute @e[type=Creeper] ~ ~ ~ kill @e[type=ArmorStand,r=2]
 	tp @e[type=Creeper] ~ ~-1000 ~
 ;;
@@ -35,4 +36,20 @@
 :: "Villager => BreakableBrick"
 	execute @e[type=Villager] ~ ~ ~ summon ArmorStand ~ ~-1 ~ {CustomName:BreakableBrick,NoGravity:1b,Invisible:1b}
 	tp @e[type=Villager] ~ ~-1000 ~
+;;
+
+:: "Glowstone => Coin"
+	scoreboard players add @e[type=Item] @!coinify 1 {Item:{id:minecraft:glowstone_dust}}
+	execute @e[type=Item,score_coinify_min=10] ~ ~ ~ summon ArmorStand ~ ~-0.8 ~ {Invisible:1b,ShowArms:1b,ArmorItems:[{},{},{},{id:rotten_flesh}],Pose:{Head:[0f,0f,0f],RightArm:[0f,0f,0f]},CustomName:Coin,DisabledSlots:2039583,NoGravity:1b,Small:1b}
+	kill @e[type=Item,score_coinify_min=10]
+;;
+
+:: "XP Bottle => Kill Coins"
+	execute @e[type=ThrownExpBottle] ~ ~ ~ kill @e[type=ArmorStand,name=Coin,r=2]
+;;
+
+:: "Firework Charge => Star Coin"
+	scoreboard players add @e[type=Item] @!starify 1 {Item:{id:minecraft:firework_charge}}
+	execute @e[type=Item,score_starify_min=10] ~ ~ ~ summon ArmorStand ~ ~-1 ~ {Invisible:1b,ShowArms:1b,ArmorItem:[{},{},{},{id:gold_ingot}],Pose:{Head:[0f,0f,0f],RightArm:[0f,0f,0f]},CustomName:starCoin,DisabledSlots:2039583,NoGravity:1b}
+	kill @e[type=Item,score_starify_min=10]
 ;;

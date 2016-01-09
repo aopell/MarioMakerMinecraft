@@ -1,0 +1,13 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+
+replaceitem entity @a[tag=tools] slot.hotbar.1 minecraft:glowstone_dust 64
+replaceitem entity @a[tag=tools] slot.hotbar.2 minecraft:spawn_egg 1 0 {display:{Name:Coin Block Creator},EntityTag:{id:"Blaze"}}
+replaceitem entity @a[tag=tools] slot.hotbar.3 minecraft:spawn_egg 1 0 {display:{Name:Mushroom Block Creator},EntityTag:{id:"Chicken"}}
+replaceitem entity @a[tag=tools] slot.hotbar.4 minecraft:spawn_egg 1 0 {display:{Name:1UP Creator},EntityTag:{id:"Slime"}}
+replaceitem entity @a[tag=tools] slot.hotbar.5 minecraft:spawn_egg 1 0 {display:{Name:Tanooki Block Creator},EntityTag:{id:"Rabbit"}}
+replaceitem entity @a[tag=tools] slot.hotbar.6 minecraft:spawn_egg 1 0 {display:{Name:Breakable Brick Block Creator},EntityTag:{id:"Villager"}}
+replaceitem entity @a[tag=tools] slot.hotbar.7 minecraft:spawn_egg 1 0 {display:{Name:ArmorStand Destroyer},EntityTag:{id:"Creeper"}}
+replaceitem entity @a[tag=tools] slot.hotbar.8 minecraft:spawn_egg 1 0 {display:{Name:ArmorStand Finder},EntityTag:{id:"Endermite"}}
+scoreboard players tag @a remove @!tools

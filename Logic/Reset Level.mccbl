@@ -1,0 +1,33 @@
+@TYPE ONCE
+@CHAIN ON
+@VERSION 1.9
+
+execute @e[type=ArmorStand,name=takencoin] ~ ~ ~ summon ArmorStand ~ ~ ~ {Invisible:1b,ShowArms:1b,ArmorItems:[{},{},{},{id:rotten_flesh}],Pose:{Head:[0f,0f,0f],RightArm:[0f,0f,0f]},CustomName:"Coin",DisabledSlots:2039583,NoGravity:1b,Small:1b}
+kill @e[type=ArmorStand,name=takencoin]
+
+execute @e[type=ArmorStand,name=takenmushroom] ~ ~ ~ summon ArmorStand ~ ~ ~ {Invisible:1b,CustomName:"Mushroom",DisabledSlots:2039583,NoGravity:1b,Small:1b}
+execute @e[type=ArmorStand,name=takenmushroom] ~ ~ ~ setblock ~ ~-1 ~ minecraft:gold_block
+kill @e[type=ArmorStand,name=takenmushroom]
+
+execute @e[type=ArmorStand,name=takentanooki] ~ ~ ~ summon ArmorStand ~ ~ ~ {Invisible:1b,CustomName:"Tanooki",DisabledSlots:2039583,NoGravity:1b,Small:1b}
+execute @e[type=ArmorStand,name=takentanooki] ~ ~ ~ setblock ~ ~-1 ~ minecraft:gold_block
+kill @e[type=ArmorStand,name=takentanooki]
+
+execute @e[type=ArmorStand,name=takencoinqblock] ~ ~ ~ summon ArmorStand ~ ~ ~ {Invisible:1b,CustomName:CoinQBlock,DisabledSlots:2039583,NoGravity:1b,Small:1b}
+execute @e[type=ArmorStand,name=takencoinqblock] ~ ~ ~ setblock ~ ~-1 ~ minecraft:gold_block
+kill @e[type=ArmorStand,name=takencoinqblock]
+
+execute @e[type=ArmorStand,name=taken1up] ~ ~ ~ summon ArmorStand ~ ~ ~ {Invisible:1b,CustomName:1UP,DisabledSlots:2039583,NoGravity:1b,Small:1b}
+execute @e[type=ArmorStand,name=takencoinqblock] ~ ~ ~ setblock ~ ~-1 ~ minecraft:gold_block
+kill @e[type=ArmorStand,name=taken1up]
+
+execute @e[type=ArmorStand,name=brokenbrick] ~ ~ ~ summon ArmorStand ~ ~ ~ {Invisible:1b,CustomName:BreakableBrick,DisabledSlots:2039583,NoGravity:1b,Small:1b}
+execute @e[type=ArmorStand,name=brokenbrick] ~ ~ ~ setblock ~ ~ ~ minecraft:brick_block
+kill @e[type=ArmorStand,name=brokenbrick]
+
+replaceitem entity @e[type=ArmorStand,name=Flagpole] slot.armor.head minecraft:banner 1 0 {BlockEntityTag:{Base:0,Patterns:[{Pattern:flo,Color:15}]}}
+replaceitem entity @e[type=ArmorStand,name=Checkpoint] slot.armor.head minecraft:banner 1 0 {BlockEntityTag:{Base:0,Patterns:[{Pattern:flo,Color:15}]}}
+scoreboard players set @a @!flagpole 0
+scoreboard players set @a @!checkpoint 0
+
+blockdata -58 56 44 {auto:0b}
