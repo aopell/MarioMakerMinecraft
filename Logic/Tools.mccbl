@@ -1,0 +1,38 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+
+:: "Rabbit => Tanooki"
+	execute @e[type=Rabbit] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:Tanooki,NoGravity:1b,Invisible:1b}
+	tp @e[type=Rabbit] ~ ~-1000 ~
+;;
+
+:: "Creeper => Kill ArmorStands"
+	execute @e[type=Creeper] ~ ~ ~ kill @e[type=ArmorStand,r=2]
+	tp @e[type=Creeper] ~ ~-1000 ~
+;;
+
+:: "Chicken => Mushroom"
+	execute @e[type=Chicken] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:Mushroom,NoGravity:1b,Invisible:1b}
+	tp @e[type=Chicken] ~ ~-1000 ~
+;;
+
+:: "Slime => 1UP"
+	execute @e[type=Slime] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:1UP,NoGravity:1b,Invisible:1b}
+	tp @e[type=Slime] ~ ~-1000 ~
+;;
+
+:: "Endermite ArmorStand Finder"
+	execute @e[type=Endermite] ~ ~ ~ tell @p @e[type=ArmorStand,r=2]
+	tp @e[type=Endermite] ~ ~-1000 ~
+;;
+
+:: "Blaze => CoinQBlock"
+	execute @e[type=Blaze] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:CoinQBlock,NoGravity:1b,Invisible:1b}
+	tp @e[type=Blaze] ~ ~-1000 ~
+;;
+
+:: "Villager => BreakableBrick"
+	execute @e[type=Villager] ~ ~ ~ summon ArmorStand ~ ~-1 ~ {CustomName:BreakableBrick,NoGravity:1b,Invisible:1b}
+	tp @e[type=Villager] ~ ~-1000 ~
+;;
