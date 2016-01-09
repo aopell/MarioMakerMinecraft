@@ -31,6 +31,7 @@
 	execute @e[score_pow_min=1] ~ ~ ~ execute @e[type=ArmorStand,name=Coin,r=10] ~ ~ ~ summon Item ~ ~ ~ {Item:{id:rotten_flesh,Count:1}}
 	execute @e[score_pow_min=1] ~ ~ ~ execute @e[type=ArmorStand,name=Coin,r=10] ~ ~ ~ summon ArmorStand ~ ~ ~ {DisabledSlots:2039583,CustomName:takencoin,Invisible:1b,NoGravity:1b}
 	execute @e[score_pow_min=1] ~ ~ ~ execute @e[type=ArmorStand,name=takencoin,r=10] ~ ~ ~ kill @e[type=ArmorStand,r=0,name=Coin]
+	execute @e[score_pow_min=1] ~ ~ ~ tp @a[r=15] ~ ~0.8 ~
 	kill @e[type=Item,score_pow_min=1]
 	scoreboard players set @e[score_pow_min=1] @!pow 0
 ;;
