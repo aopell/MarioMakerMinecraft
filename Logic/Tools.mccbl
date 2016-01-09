@@ -53,3 +53,9 @@
 	execute @e[type=Item,score_starify_min=10] ~ ~ ~ summon ArmorStand ~ ~-1 ~ {Invisible:1b,ShowArms:1b,ArmorItem:[{},{},{},{id:gold_ingot}],Pose:{Head:[0f,0f,0f],RightArm:[0f,0f,0f]},CustomName:starCoin,DisabledSlots:2039583,NoGravity:1b}
 	kill @e[type=Item,score_starify_min=10]
 ;;
+
+:: "Flagpole Spawner"
+	execute @e[type=ArmorStand,name=FlagpoleSpawner] ~ ~ ~ clone 8 56 70 10 66 72 ~-1 ~ ~-1
+	execute @e[type=ArmorStand,name=FlagpoleSpawner] ~ ~ ~ summon ArmorStand ~0.5 ~8.2 ~0.2 {CustomName:Flagpole,Invisible:1b,NoGravity:1b,Pose:{Head:[180f,180f,90f]}}
+	execute @e[type=ArmorStand,name=FlagpoleSpawner] ~ ~ ~ replaceitem entity @e[type=ArmorStand,r=15,name=Flagpole] slot.armor.head minecraft:banner 1 0 {BlockEntityTag:{Base:0,Patterns:[{Pattern:flo,Color:15}]}}
+	execute @e[type=ArmorStand,name=FlagpoleSpawner] ~ ~ ~ kill @e[type=ArmorStand,name=FlagpoleSpawner,r=0]

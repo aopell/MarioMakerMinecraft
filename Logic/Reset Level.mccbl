@@ -30,4 +30,8 @@ replaceitem entity @e[type=ArmorStand,name=Checkpoint] slot.armor.head minecraft
 scoreboard players set @a @!flagpole 0
 scoreboard players set @a @!checkpoint 0
 
+tp @e[name=Flagpole,score_flagpole=-1] ~ ~8 ~
+scoreboard players set @e[score_flagpole=-1] @!flagpole 0
+
 blockdata -58 56 44 {auto:0b}
+tellraw @a ["",{"text":"Level Reset Complete","color":"green","italic":true}]
