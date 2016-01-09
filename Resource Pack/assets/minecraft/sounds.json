@@ -102,6 +102,12 @@
       "custom/level_complete"
     ]
   },
+
+	"pow": {
+    "sounds": [
+      "custom/pow"
+    ]
+  },
 	
 	"coin": {
     "sounds": [
