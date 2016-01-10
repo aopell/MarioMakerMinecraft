@@ -50,7 +50,7 @@
 	tp @e[score_zMom_min=81,score_zMom=90] ~ ~ ~0.09
 	tp @e[score_zMom_min=91,score_zMom=100] ~ ~ ~0.1
 ;;
-scoreboard players set @e[r=5,type=ArmorStand] pulley 1 {ArmorItems:[{Count:1b}]}
+scoreboard players set @e[name=pulley,type=ArmorStand] pulley 1 {ArmorItems:[{Count:1b}]}
 
 ::"1"
 execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set xMom 0
