@@ -1,0 +1,138 @@
+@TYPE REPEAT
+@CHAIN ON
+@VERSION 1.9
+
+:: "Teleport x-" 
+	tp @e[score_xMom=-1,score_xMom_min=-10] ~-0.01 ~ ~
+	tp @e[score_xMom=-11,score_xMom_min=-20] ~-0.02 ~ ~
+	tp @e[score_xMom=-21,score_xMom_min=-30] ~-0.03 ~ ~
+	tp @e[score_xMom=-31,score_xMom_min=-40] ~-0.04 ~ ~
+	tp @e[score_xMom=-41,score_xMom_min=-50] ~-0.05 ~ ~
+	tp @e[score_xMom=-51,score_xMom_min=-60] ~-0.06 ~ ~
+	tp @e[score_xMom=-61,score_xMom_min=-70] ~-0.07 ~ ~
+	tp @e[score_xMom=-71,score_xMom_min=-80] ~-0.08 ~ ~
+	tp @e[score_xMom=-81,score_xMom_min=-90] ~-0.09 ~ ~
+	tp @e[score_xMom=-91,score_xMom_min=-100] ~-0.1 ~ ~
+;;
+:: "Teleport x+" 
+	tp @e[score_xMom_min=1,score_xMom=10] ~0.01 ~ ~
+	tp @e[score_xMom_min=11,score_xMom=20] ~0.02 ~ ~
+	tp @e[score_xMom_min=21,score_xMom=30] ~0.03 ~ ~
+	tp @e[score_xMom_min=31,score_xMom=40] ~0.04 ~ ~
+	tp @e[score_xMom_min=41,score_xMom=50] ~0.05 ~ ~
+	tp @e[score_xMom_min=51,score_xMom=60] ~0.06 ~ ~
+	tp @e[score_xMom_min=61,score_xMom=70] ~0.07 ~ ~
+	tp @e[score_xMom_min=71,score_xMom=80] ~0.08 ~ ~
+	tp @e[score_xMom_min=81,score_xMom=90] ~0.09 ~ ~
+	tp @e[score_xMom_min=91,score_xMom=100] ~0.1 ~ ~
+;;
+:: "Teleport z-" 
+	tp @e[score_zMom=-1,score_zMom_min=-10] ~ ~ ~-0.01
+	tp @e[score_zMom=-11,score_zMom_min=-20] ~ ~ ~-0.02
+	tp @e[score_zMom=-21,score_zMom_min=-30] ~ ~ ~-0.03
+	tp @e[score_zMom=-31,score_zMom_min=-40] ~ ~ ~-0.04
+	tp @e[score_zMom=-41,score_zMom_min=-50] ~ ~ ~-0.05
+	tp @e[score_zMom=-51,score_zMom_min=-60] ~ ~ ~-0.06
+	tp @e[score_zMom=-61,score_zMom_min=-70] ~ ~ ~-0.07
+	tp @e[score_zMom=-71,score_zMom_min=-80] ~ ~ ~-0.08
+	tp @e[score_zMom=-81,score_zMom_min=-90] ~ ~ ~-0.09
+	tp @e[score_zMom=-91,score_zMom_min=-100] ~ ~ ~-0.1
+;;
+:: "Teleport z+" 
+	tp @e[score_zMom_min=1,score_zMom=10] ~ ~ ~0.01
+	tp @e[score_zMom_min=11,score_zMom=20] ~ ~ ~0.02
+	tp @e[score_zMom_min=21,score_zMom=30] ~ ~ ~0.03
+	tp @e[score_zMom_min=31,score_zMom=40] ~ ~ ~0.04
+	tp @e[score_zMom_min=41,score_zMom=50] ~ ~ ~0.05
+	tp @e[score_zMom_min=51,score_zMom=60] ~ ~ ~0.06
+	tp @e[score_zMom_min=61,score_zMom=70] ~ ~ ~0.07
+	tp @e[score_zMom_min=71,score_zMom=80] ~ ~ ~0.08
+	tp @e[score_zMom_min=81,score_zMom=90] ~ ~ ~0.09
+	tp @e[score_zMom_min=91,score_zMom=100] ~ ~ ~0.1
+;;
+scoreboard players set @e[r=5,type=ArmorStand] pulley 1 {ArmorItems:[{Count:1b}]}
+
+::"1"
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set xMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=16,ry=45] ~ ~ ~ scoreboard players set xMom -5
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=46,ry=75] ~ ~ ~ scoreboard players set xMom -8
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=76,ry=105] ~ ~ ~ scoreboard players set xMom -10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=106,ry=135] ~ ~ ~ scoreboard players set xMom -8
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=136,ry=165] ~ ~ ~ scoreboard players set xMom -5
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=166,ry=195] ~ ~ ~ scoreboard players set xMom -0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=196,ry=225] ~ ~ ~ scoreboard players set xMom 5
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=226,ry=255] ~ ~ ~ scoreboard players set xMom 8
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=256,ry=285] ~ ~ ~ scoreboard players set xMom 10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=286,ry=315] ~ ~ ~ scoreboard players set xMom 8
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=316,ry=345] ~ ~ ~ scoreboard players set xMom 5
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set zMom 10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=16,ry=45] ~ ~ ~ scoreboard players set zMom 8
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=46,ry=75] ~ ~ ~ scoreboard players set zMom 5
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=76,ry=105] ~ ~ ~ scoreboard players set zMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=106,ry=135] ~ ~ ~ scoreboard players set zMom -5
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=136,ry=165] ~ ~ ~ scoreboard players set zMom -8
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=166,ry=195] ~ ~ ~ scoreboard players set zMom -10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=196,ry=225] ~ ~ ~ scoreboard players set zMom -8
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=226,ry=255] ~ ~ ~ scoreboard players set zMom -5
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=256,ry=285] ~ ~ ~ scoreboard players set zMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=286,ry=315] ~ ~ ~ scoreboard players set zMom 5
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=1,rym=316,ry=345] ~ ~ ~ scoreboard players set zMom 8
+;;
+
+::"2"
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set xMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=16,ry=45] ~ ~ ~ scoreboard players set xMom -10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=46,ry=75] ~ ~ ~ scoreboard players set xMom -17
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=76,ry=105] ~ ~ ~ scoreboard players set xMom -20
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=106,ry=135] ~ ~ ~ scoreboard players set xMom -17
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=136,ry=165] ~ ~ ~ scoreboard players set xMom -10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=166,ry=195] ~ ~ ~ scoreboard players set xMom -0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=196,ry=225] ~ ~ ~ scoreboard players set xMom 10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=226,ry=255] ~ ~ ~ scoreboard players set xMom 17
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=256,ry=285] ~ ~ ~ scoreboard players set xMom 20
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=286,ry=315] ~ ~ ~ scoreboard players set xMom 17
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=316,ry=345] ~ ~ ~ scoreboard players set xMom 10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set zMom 20
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=16,ry=45] ~ ~ ~ scoreboard players set zMom 17
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=46,ry=75] ~ ~ ~ scoreboard players set zMom 10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=76,ry=105] ~ ~ ~ scoreboard players set zMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=106,ry=135] ~ ~ ~ scoreboard players set zMom -10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=136,ry=165] ~ ~ ~ scoreboard players set zMom -17
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=166,ry=195] ~ ~ ~ scoreboard players set zMom -20
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=196,ry=225] ~ ~ ~ scoreboard players set zMom -17
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=226,ry=255] ~ ~ ~ scoreboard players set zMom -10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=256,ry=285] ~ ~ ~ scoreboard players set zMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=286,ry=315] ~ ~ ~ scoreboard players set zMom 10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=316,ry=345] ~ ~ ~ scoreboard players set zMom 17
+;;
+
+::"4"
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set xMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=16,ry=45] ~ ~ ~ scoreboard players set xMom -50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=46,ry=75] ~ ~ ~ scoreboard players set xMom -86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=76,ry=105] ~ ~ ~ scoreboard players set xMom -100
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=106,ry=135] ~ ~ ~ scoreboard players set xMom -86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=136,ry=165] ~ ~ ~ scoreboard players set xMom -50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=166,ry=195] ~ ~ ~ scoreboard players set xMom -0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=196,ry=225] ~ ~ ~ scoreboard players set xMom 50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=226,ry=255] ~ ~ ~ scoreboard players set xMom 86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=256,ry=285] ~ ~ ~ scoreboard players set xMom 100
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=286,ry=315] ~ ~ ~ scoreboard players set xMom 86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=316,ry=345] ~ ~ ~ scoreboard players set xMom 50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set zMom 10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=16,ry=45] ~ ~ ~ scoreboard players set zMom 86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=46,ry=75] ~ ~ ~ scoreboard players set zMom 50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=76,ry=105] ~ ~ ~ scoreboard players set zMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=106,ry=135] ~ ~ ~ scoreboard players set zMom -50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=136,ry=165] ~ ~ ~ scoreboard players set zMom -86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=166,ry=195] ~ ~ ~ scoreboard players set zMom -10
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=196,ry=225] ~ ~ ~ scoreboard players set zMom -86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=226,ry=255] ~ ~ ~ scoreboard players set zMom -50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=256,ry=285] ~ ~ ~ scoreboard players set zMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=286,ry=315] ~ ~ ~ scoreboard players set zMom 50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=316,ry=345] ~ ~ ~ scoreboard players set zMom 86
+;;
+
+scoreboard players set @e[score_pulley_min=1] pulley 0
+scoreboard players set @a[score_xMom=-100] xMom -100
+scoreboard players set @a[score_xMom_min=100] xMom 100
