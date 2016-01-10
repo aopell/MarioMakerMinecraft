@@ -53,57 +53,57 @@
 scoreboard players set @e[name=pulley,type=ArmorStand] pulley 1 {ArmorItems:[{Count:1b}]}
 
 ::"4"
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set @p[r=1] xMom 0
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=16,ry=45] ~ ~ ~ scoreboard players set @p[r=1] xMom -50
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=46,ry=75] ~ ~ ~ scoreboard players set @p[r=1] xMom -86
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=76,ry=105] ~ ~ ~ scoreboard players set @p[r=1] xMom -100
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=106,ry=135] ~ ~ ~ scoreboard players set @p[r=1] xMom -86
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=136,ry=165] ~ ~ ~ scoreboard players set @p[r=1] xMom -50
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=166,ry=195] ~ ~ ~ scoreboard players set @p[r=1] xMom -0
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=196,ry=225] ~ ~ ~ scoreboard players set @p[r=1] xMom 50
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=226,ry=255] ~ ~ ~ scoreboard players set @p[r=1] xMom 86
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=256,ry=285] ~ ~ ~ scoreboard players set @p[r=1] xMom 100
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=286,ry=315] ~ ~ ~ scoreboard players set @p[r=1] xMom 86
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=316,ry=345] ~ ~ ~ scoreboard players set @p[r=1] xMom 50
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set @p[r=1] zMom 100
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=16,ry=45] ~ ~ ~ scoreboard players set @p[r=1] zMom 86
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=46,ry=75] ~ ~ ~ scoreboard players set @p[r=1] zMom 50
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=76,ry=105] ~ ~ ~ scoreboard players set @p[r=1] zMom 0
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=106,ry=135] ~ ~ ~ scoreboard players set @p[r=1] zMom -50
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=136,ry=165] ~ ~ ~ scoreboard players set @p[r=1] zMom -86
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=166,ry=195] ~ ~ ~ scoreboard players set @p[r=1] zMom -100
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=196,ry=225] ~ ~ ~ scoreboard players set @p[r=1] zMom -86
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=226,ry=255] ~ ~ ~ scoreboard players set @p[r=1] zMom -50
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=256,ry=285] ~ ~ ~ scoreboard players set @p[r=1] zMom 0
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=286,ry=315] ~ ~ ~ scoreboard players set @p[r=1] zMom 50
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=316,ry=345] ~ ~ ~ scoreboard players set @p[r=1] zMom 86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set @p[r=1] xMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=16,ry=45] ~ ~ ~ scoreboard players set @p[r=1] xMom -50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=46,ry=75] ~ ~ ~ scoreboard players set @p[r=1] xMom -86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=76,ry=105] ~ ~ ~ scoreboard players set @p[r=1] xMom -100
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=106,ry=135] ~ ~ ~ scoreboard players set @p[r=1] xMom -86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=136,ry=165] ~ ~ ~ scoreboard players set @p[r=1] xMom -50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=166,ry=195] ~ ~ ~ scoreboard players set @p[r=1] xMom -0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=196,ry=225] ~ ~ ~ scoreboard players set @p[r=1] xMom 50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=226,ry=255] ~ ~ ~ scoreboard players set @p[r=1] xMom 86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=256,ry=285] ~ ~ ~ scoreboard players set @p[r=1] xMom 100
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=286,ry=315] ~ ~ ~ scoreboard players set @p[r=1] xMom 86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=316,ry=345] ~ ~ ~ scoreboard players set @p[r=1] xMom 50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set @p[r=1] zMom 100
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=16,ry=45] ~ ~ ~ scoreboard players set @p[r=1] zMom 86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=46,ry=75] ~ ~ ~ scoreboard players set @p[r=1] zMom 50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=76,ry=105] ~ ~ ~ scoreboard players set @p[r=1] zMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=106,ry=135] ~ ~ ~ scoreboard players set @p[r=1] zMom -50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=136,ry=165] ~ ~ ~ scoreboard players set @p[r=1] zMom -86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=166,ry=195] ~ ~ ~ scoreboard players set @p[r=1] zMom -100
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=196,ry=225] ~ ~ ~ scoreboard players set @p[r=1] zMom -86
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=226,ry=255] ~ ~ ~ scoreboard players set @p[r=1] zMom -50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=256,ry=285] ~ ~ ~ scoreboard players set @p[r=1] zMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=286,ry=315] ~ ~ ~ scoreboard players set @p[r=1] zMom 50
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[rm=4,r=5,rym=316,ry=345] ~ ~ ~ scoreboard players set @p[r=1] zMom 86
 ;;
 
 ::"3"
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set @p[r=1] xMom 0
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=16,ry=45] ~ ~ ~ scoreboard players set @p[r=1] xMom -30
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=46,ry=75] ~ ~ ~ scoreboard players set @p[r=1] xMom -52
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=76,ry=105] ~ ~ ~ scoreboard players set @p[r=1] xMom -60
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=106,ry=135] ~ ~ ~ scoreboard players set @p[r=1] xMom -52
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=136,ry=165] ~ ~ ~ scoreboard players set @p[r=1] xMom -30
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=166,ry=195] ~ ~ ~ scoreboard players set @p[r=1] xMom -0
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=196,ry=225] ~ ~ ~ scoreboard players set @p[r=1] xMom 30
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=226,ry=255] ~ ~ ~ scoreboard players set @p[r=1] xMom 52
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=256,ry=285] ~ ~ ~ scoreboard players set @p[r=1] xMom 60
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=286,ry=315] ~ ~ ~ scoreboard players set @p[r=1] xMom 52
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=316,ry=345] ~ ~ ~ scoreboard players set @p[r=1] xMom 30
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set @p[r=1] zMom 60
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=16,ry=45] ~ ~ ~ scoreboard players set @p[r=1] zMom 52
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=46,ry=75] ~ ~ ~ scoreboard players set @p[r=1] zMom 30
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=76,ry=105] ~ ~ ~ scoreboard players set @p[r=1] zMom 0
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=106,ry=135] ~ ~ ~ scoreboard players set @p[r=1] zMom -30
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=136,ry=165] ~ ~ ~ scoreboard players set @p[r=1] zMom -52
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=166,ry=195] ~ ~ ~ scoreboard players set @p[r=1] zMom -60
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=196,ry=225] ~ ~ ~ scoreboard players set @p[r=1] zMom -52
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=226,ry=255] ~ ~ ~ scoreboard players set @p[r=1] zMom -30
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=256,ry=285] ~ ~ ~ scoreboard players set @p[r=1] zMom 0
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=286,ry=315] ~ ~ ~ scoreboard players set @p[r=1] zMom 30
-execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=2,rym=316,ry=345] ~ ~ ~ scoreboard players set @p[r=1] zMom 52
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set @p[r=1] xMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=16,ry=45] ~ ~ ~ scoreboard players set @p[r=1] xMom -30
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=46,ry=75] ~ ~ ~ scoreboard players set @p[r=1] xMom -52
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=76,ry=105] ~ ~ ~ scoreboard players set @p[r=1] xMom -60
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=106,ry=135] ~ ~ ~ scoreboard players set @p[r=1] xMom -52
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=136,ry=165] ~ ~ ~ scoreboard players set @p[r=1] xMom -30
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=166,ry=195] ~ ~ ~ scoreboard players set @p[r=1] xMom -0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=196,ry=225] ~ ~ ~ scoreboard players set @p[r=1] xMom 30
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=226,ry=255] ~ ~ ~ scoreboard players set @p[r=1] xMom 52
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=256,ry=285] ~ ~ ~ scoreboard players set @p[r=1] xMom 60
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=286,ry=315] ~ ~ ~ scoreboard players set @p[r=1] xMom 52
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=316,ry=345] ~ ~ ~ scoreboard players set @p[r=1] xMom 30
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=346] ~ ~ ~ execute @a[ry=15] ~ ~ ~ scoreboard players set @p[r=1] zMom 60
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=16,ry=45] ~ ~ ~ scoreboard players set @p[r=1] zMom 52
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=46,ry=75] ~ ~ ~ scoreboard players set @p[r=1] zMom 30
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=76,ry=105] ~ ~ ~ scoreboard players set @p[r=1] zMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=106,ry=135] ~ ~ ~ scoreboard players set @p[r=1] zMom -30
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=136,ry=165] ~ ~ ~ scoreboard players set @p[r=1] zMom -52
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=166,ry=195] ~ ~ ~ scoreboard players set @p[r=1] zMom -60
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=196,ry=225] ~ ~ ~ scoreboard players set @p[r=1] zMom -52
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=226,ry=255] ~ ~ ~ scoreboard players set @p[r=1] zMom -30
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=256,ry=285] ~ ~ ~ scoreboard players set @p[r=1] zMom 0
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=286,ry=315] ~ ~ ~ scoreboard players set @p[r=1] zMom 30
+execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=3,rym=316,ry=345] ~ ~ ~ scoreboard players set @p[r=1] zMom 52
 ;;
 
 ::"2"
