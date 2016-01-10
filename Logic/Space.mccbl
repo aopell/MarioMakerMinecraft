@@ -133,6 +133,7 @@ execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=286,ry=315] ~ ~ ~ scoreb
 execute @e[score_pulley_min=1] ~ ~ ~ execute @a[r=4,rym=316,ry=345] ~ ~ ~ scoreboard players set zMom 86
 ;;
 
+entitydata @e[type=ArmorStand,score_pulley_min=1] {ArmorItems:[{},{},{},{}]}
 scoreboard players set @e[score_pulley_min=1] pulley 0
 scoreboard players set @a[score_xMom=-100] xMom -100
 scoreboard players set @a[score_xMom_min=100] xMom 100
