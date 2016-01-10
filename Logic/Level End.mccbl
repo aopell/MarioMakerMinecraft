@@ -4,7 +4,7 @@
 
 execute @a[score_flagpole=0,score_flagpole_min=0] ~ ~ ~ detect ~ ~ ~ minecraft:iron_bars -1 scoreboard players set @p @!flagpole -1
 execute @a[score_flagpole=-1] ~ ~ ~ playsound @!level_complete @p ~ ~ ~ 1000
-execute @a[score_flagpole=-1] ~ ~ ~ scoreboard players set @e[name=Flagpole,type=ArmorStand,r=20] @!flagpole 1
+execute @a[score_flagpole=-1] ~ ~ ~ scoreboard players set @e[name=Flagpole,type=ArmorStand,r=20,score_flagpole=0,score_flagpole_min=0] @!flagpole 1
 tp @e[type=ArmorStand,name=Flagpole,score_flagpole_min=1] ~ ~-0.4 ~
 scoreboard players set @e[type=ArmorStand,name=Flagpole,score_flagpole_min=20] @!flagpole -1
 scoreboard players add @e[type=ArmorStand,name=Flagpole,score_flagpole_min=1] @!flagpole 1
