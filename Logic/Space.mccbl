@@ -166,7 +166,8 @@ scoreboard players set @a[score_xMom=-100] xMom -100
 scoreboard players set @a[score_xMom_min=100] xMom 100
 execute @e[name=finish] ~ ~ ~ scoreboard players set @a[r=2] xMom 0
 execute @e[name=finish] ~ ~ ~ scoreboard players set @a[r=2] zMom 0
-tp @a[score_cheat_min=1] ~ ~-100 ~
-scoreboard players set @a[score_cheat_min=1] xMom 0
-scoreboard players set @a[score_cheat_min=1] zMom 0
-scoreboard players set @a[score_cheat_min=1] cheat 0
+tp @a[score_cheat_min=1,score_spaceMode_min=1] ~ ~-100 ~
+scoreboard players set @a[score_cheat_min=1,score_spaceMode_min=1] xMom 0
+scoreboard players set @a[score_cheat_min=1,score_spaceMode_min=1] zMom 0
+scoreboard players set @a[score_cheat_min=1,score_spaceMode_min=1] spaceMode 0
+scoreboard players set @a[score_cheat_min=1,score_spaceMode_min=1] cheat 0
